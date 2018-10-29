@@ -21,12 +21,15 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           use: [
             {
               loader: "css-loader",
               options: { importLoaders: 1 }
+            },
+            {
+              loader: "sass-loader"
             },
             {
               loader: "postcss-loader",

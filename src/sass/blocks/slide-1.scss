@@ -1,0 +1,50 @@
+.slide-1 {
+  background-color: #72b9fd;
+  background-image: url("../img/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: calc(100vh - 1px);
+  border-top: 1px solid transparent;
+  position: relative;
+}
+
+.slide-1__heading {
+  margin: 0;
+  margin-left: 7.32%;
+  margin-top: 13.22%;
+  width: 73.24%;
+
+  color: $color-text-main;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.slide-1__terms {
+  color: $color-text-main;
+  font-weight: 400;
+  font-size: 20px;
+
+  position: absolute;
+
+  &--1 {
+    top: 33.5%;
+    left: 61%;
+  }
+
+  &--2 {
+    top: 48%;
+    left: 22%;
+  }
+
+  &--3 {
+    top: 61%;
+    left: 36%;
+  }
+
+  &--4 {
+    top: 58.5%;
+    left: 76%;
+  }
+}
