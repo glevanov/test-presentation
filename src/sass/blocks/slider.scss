@@ -1,0 +1,23 @@
+.slider {
+
+}
+
+.slider__pin {
+  width: 42.5px;
+  height: 55px;
+  background-image: url("../img/slider-marker.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slider__scale {
+  width: 640px;
+  height: 12px;
+  background-color: $color-slider-scale;
+}
+
+.slider__fill {
+  width: 320px;
+  height: 12px;
+  background-color: $color-slider-fill;
+}

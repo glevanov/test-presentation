@@ -1,0 +1,21 @@
+.slide-3-1 {
+  background-color: #101651;
+  background-image: url("../img/bg-ice-1.png"), url("../img/bg-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: calc(100vh - 1px);
+  border-top: 1px solid transparent;
+  position: relative;
+}
+
+.slide-3-1__heading {
+  margin: 0;
+  margin-left: 8.2031%;
+  margin-top: 15.0390%;
+
+  color: $color-text-accent;
+
+  font-weight: 400;
+  font-size: 30px;
+}
