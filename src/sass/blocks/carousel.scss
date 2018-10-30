@@ -1,0 +1,23 @@
+.carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 45.8984%;
+  right: 2.6367%;
+}
+
+.carousel__control {
+  display: block;
+  margin-bottom: 7px;
+
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: $color-carousel-default;
+
+  &--selected {
+    background-color: $color-carousel-selected;
+  }
+}
