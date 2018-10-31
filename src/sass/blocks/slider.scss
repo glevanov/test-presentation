@@ -1,5 +1,7 @@
 .slider {
-
+  position: absolute;
+  bottom: 25px;
+  left: 195px;
 }
 
 .slider__pin {
@@ -8,6 +10,11 @@
   background-image: url("../img/slider-marker.png");
   background-repeat: no-repeat;
   background-size: contain;
+
+  position: relative;
+  left: 50px;
+  top: -18px;
+  z-index: 10;
 }
 
 .slider__scale {
@@ -17,7 +24,25 @@
 }
 
 .slider__fill {
-  width: 320px;
+  z-index: 5;
+  width: calc(50px + 42.5px/2);
   height: 12px;
   background-color: $color-slider-fill;
+
+  position: relative;
+  left: 0;
+  top: -55px;
+}
+
+.slider__text-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.slider__text {
+  font-size: 20px;
+  font-weight: 300;
+  color: $color-text-accent;
+  margin: 0;
 }
