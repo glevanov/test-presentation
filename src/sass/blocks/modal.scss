@@ -1,0 +1,46 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 500;
+}
+
+.modal__veil {
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100vh;
+  width: 100%;
+}
+
+.modal__plaque {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 202px;
+  width: 100%;
+  background-image: url("../img/modal-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 202px;
+}
+
+.modal__text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  padding-left: 65px;
+  padding-right: 115px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.modal__paragraph {
+  margin: 0;
+  color: $color-text-modal;
+  font-size: 15px;
+  line-height: 18px;
+}
