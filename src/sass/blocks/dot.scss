@@ -1,0 +1,28 @@
+.dot {
+  background-image: url("../img/dot-static.png");
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+
+  &--1 {
+    top: 275px;
+    left: 575px;
+  }
+
+  &--2 {
+    top: 425px;
+    left: 275px;
+  }
+
+  &--3 {
+    top: 530px;
+    left: 475px;
+  }
+
+  &--4 {
+    top: 515px;
+    left: 820px;
+  }
+}
