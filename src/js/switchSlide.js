@@ -1,11 +1,11 @@
 import slidesList from "./slidesList.js";
 
 const hideSlides = () => {
-  slidesList.forEach(it => it.classList.add("hidden"));
+  slidesList.forEach(it => it.classList.add("visually-hidden"));
 };
 
 const showSlide = index => {
-  slidesList[index].classList.remove("hidden");
+  slidesList[index].classList.remove("visually-hidden");
 };
 
 const switchSlide = index => {
