@@ -12,7 +12,7 @@
   background-size: contain;
 
   position: relative;
-  left: 50px;
+  left: calc(-42.5px/2);
   top: -18px;
   z-index: 10;
 }
@@ -25,7 +25,7 @@
 
 .slider__fill {
   z-index: 5;
-  width: calc(50px + 42.5px/2);
+  width: 0;
   height: 12px;
   background-color: $color-slider-fill;
 
