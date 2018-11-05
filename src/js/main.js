@@ -1,6 +1,8 @@
 import "../sass/main.scss";
 import "../img/arrow-down.png";
 
-import { initSlider } from "./slider.js";
+import { addSliderHandlers } from "./slider.js";
+import { addCarouselHandlers } from "./carousel.js";
 
-initSlider();
+addSliderHandlers();
+addCarouselHandlers();

@@ -1,4 +1,5 @@
 import setSlideMod from "./setSlideMod.js";
+import { addCarouselHandlers, removeCarouselHandlers } from "./carousel.js";
 
 const sliderElement = document.querySelector(".slider");
 const sliderScale = sliderElement.querySelector(".slider__scale");
@@ -20,6 +21,8 @@ const PIN_START_COORDINATE = 0 - PIN_MIDPOINT;
 const PIN_END_COODRINATE = SCALE_WIDTH - PIN_MIDPOINT;
 
 const onSliderTouch = evt => {
+  evt.preventDefault();
+  removeCarouselHandlers();
   let sliderXPosition = evt.touches[0].clientX;
   let sliderRelativePosition;
 
@@ -61,12 +64,12 @@ const onSliderTouch = evt => {
   };
 
   const onTouchMove = moveEvt => {
-    moveEvt.preventDefault();
     calculateSliderPosition(moveEvt);
     renderSliderPosition();
   };
   const onTouchUp = upEvt => {
     upEvt.preventDefault();
+    addCarouselHandlers();
     snapSliderPosition();
     document.removeEventListener("touchmove", onTouchMove);
     document.removeEventListener("touchend", onTouchUp);
@@ -76,11 +79,11 @@ const onSliderTouch = evt => {
   document.addEventListener("touchend", onTouchUp);
 };
 
-const initSlider = () => {
+const addSliderHandlers = () => {
   sliderPin.addEventListener("touchstart", evt => {
     evt.preventDefault();
     onSliderTouch(evt);
   });
 };
 
-export { initSlider };
+export { addSliderHandlers };
