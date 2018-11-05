@@ -1,3 +1,5 @@
+import setSlideMod from "./setSlideMod.js";
+
 const sliderElement = document.querySelector(".slider");
 const sliderScale = sliderElement.querySelector(".slider__scale");
 const sliderFill = sliderElement.querySelector(".slider__fill");
@@ -29,7 +31,7 @@ const onSliderTouch = evt => {
     }
     return sliderPosition;
   };
-  const calculateSliderPosition = (moveEvt) => {
+  const calculateSliderPosition = moveEvt => {
     const currentTouchX = moveEvt.touches[0].clientX;
     const horizontalShift = sliderXPosition - currentTouchX;
     sliderRelativePosition = checkSliderBoundaries(
@@ -44,13 +46,16 @@ const onSliderTouch = evt => {
   const snapSliderPosition = () => {
     if (sliderRelativePosition < SCALE_BREAKPOINTS.quarter1) {
       sliderRelativePosition = PIN_START_COORDINATE;
+      setSlideMod(1);
     } else if (
       sliderRelativePosition >= SCALE_BREAKPOINTS.quarter1 &&
       sliderRelativePosition < SCALE_BREAKPOINTS.quarter3
     ) {
       sliderRelativePosition = SCALE_BREAKPOINTS.mid - PIN_MIDPOINT;
+      setSlideMod(2);
     } else {
       sliderRelativePosition = PIN_END_COODRINATE;
+      setSlideMod(3);
     }
     renderSliderPosition();
   };
@@ -71,11 +76,11 @@ const onSliderTouch = evt => {
   document.addEventListener("touchend", onTouchUp);
 };
 
-const addPinListener = () => {
+const initSlider = () => {
   sliderPin.addEventListener("touchstart", evt => {
     evt.preventDefault();
     onSliderTouch(evt);
   });
 };
 
-export {addPinListener};
+export { initSlider };
